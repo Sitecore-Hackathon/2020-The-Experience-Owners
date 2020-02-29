@@ -1,0 +1,50 @@
+﻿@using Sitecore.Mvc
+@model List<Feature.MediaCards.Models.ParticipantDetails>
+
+@if (Model.Count > 0)
+{
+
+    <div class="row">
+        @foreach (var card in Model)
+        {
+            <div class="column">
+                <div class="card">
+                    <h3>@card.TeamName</h3>
+                    <p>
+                        @card.FirstParticipantName
+                        @if (card.TwitterProfiles.Count > 0)
+                        {
+                            <span><a class="fa fa-twitter fa-2x" href="@card.TwitterProfiles[0]" target="_blank"></a></span>
+                        }
+                        @if (card.LinkedInProfiles.Count > 0)
+                        {
+                            <span><a class="fa fa-linkedin fa-2x" href="@card.LinkedInProfiles[0]" target="_blank"></a></span>
+                        }
+                    </p>
+                    <p>
+                        @card.SecondParticipantName
+                        @if (card.TwitterProfiles.Count > 1)
+                        {
+                            <span><a class="fa fa-twitter fa-2x" href="@card.TwitterProfiles[1]" target="_blank"></a></span>
+                        }
+                        @if (card.LinkedInProfiles.Count > 1)
+                        {
+                            <span><a class="fa fa-linkedin fa-2x" href="@card.LinkedInProfiles[1]" target="_blank"></a></span>
+                        }
+                    </p>
+                    <p>
+                        @card.ThirdParticipantName
+                        @if (card.TwitterProfiles.Count > 2)
+                        {
+                            <span><a class="fa fa-twitter fa-2x" href="@card.TwitterProfiles[2]" target="_blank"></a></span>
+                        }
+                        @if (card.LinkedInProfiles.Count > 2)
+                        {
+                            <span><a class="fa fa-linkedin fa-2x" href="@card.LinkedInProfiles[2]" target="_blank"></a></span>
+                        }
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+}
