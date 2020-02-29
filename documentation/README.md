@@ -22,7 +22,7 @@ SXA, Sitecore Forms Extensions
 
 Users can browse the Hackathon Website, and Register for the Upcoming Hackathon event. Also user can visit the Gallery and Previous Hackathon detils in the website. He/She can subscribe to the list through the website.
 
-![Home](images/Hackathon Home Page.png?raw=true "Home")
+![Home](images/Hackathon-Home-Page.png?raw=true "Home")
 
 ## Video
 
